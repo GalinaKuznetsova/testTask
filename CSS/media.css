@@ -1,0 +1,157 @@
+@media (max-width: 1199px) {
+  .header__list {
+    flex-direction: column;
+  }
+  .header-text {
+    flex-direction: row-reverse;
+    justify-content: end;
+    gap: 24px;
+  }
+
+  .header-burger {
+    display: block;
+    position: relative;
+    width: 33px;
+    height: 27px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .header-burger span {
+    background-color: #0B457F;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 12px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-burger::before,
+  .header-burger::after {
+    content: " ";
+    background-color: #0B457F;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-burger::before {
+    top: 0;
+  }
+
+  .header-burger::after {
+    bottom: 0;
+  }
+
+  .header__menu {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -162%;
+    width: 250px;
+    height: 200px;
+    background-color: #fff;
+    padding: 60px 10px 0 0;
+    transition: all 0.5s ease 0s;
+    overflow: auto;
+    z-index: 1;
+  }
+
+  .header__menu.active {
+    top: 0;
+  }
+
+  .header-burger.active::before {
+    transform: rotate(45deg);
+    top: 12px;
+  }
+
+  .header-burger.active::after {
+    transform: rotate(-45deg);
+    bottom: 12px;
+  }
+
+  .header-burger.active span {
+    transform: scale(0);
+  }
+
+  .main-content {
+    grid-template-areas: "one two""three four";
+  }
+
+  .section {
+    background-size: 217px 93px;
+    background-position: bottom right;
+  }
+
+  .section-diagnostics {
+    background-size: 217px 93px;
+  }
+
+  .section-assessment {
+    background-image: url(./../img/sectionTwominiCar.png);
+  }
+
+  .section-booking {
+    background-image: url(./../img/sectionThreeMiniMockup.png);
+  }
+
+  .section-showCar {
+    background-image: url(./../img/sectionFourMiniCar.png)
+  }
+}
+
+@media (max-width: 899px) {
+  .header__body-bottom {
+    display: none;
+  }
+
+  .main {
+    padding: 120px 15px 0 15px;
+  }
+
+  .main-content {
+    grid-template-areas: "one""two""three""four";
+  }
+
+  .section {
+    background-size: 283px 123px;
+  }
+
+  .section-text {
+    width: 50%;
+  }
+}
+
+@media (max-width: 599px) {
+  .header-button {
+    display: none;
+  }
+
+  .main {
+    padding: 100px 15px 0 15px;
+  }
+
+  .main-title {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .section {
+    background-size: 149px 68px;
+  }
+
+  .section-text {
+    width: 100%;
+  }
+
+  .section-btn {
+    padding: 12px 12px;
+  }
+}
